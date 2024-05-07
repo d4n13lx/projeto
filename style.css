@@ -1,3 +1,4 @@
+
 form{
     border: black 1px solid;
 }
@@ -92,12 +93,6 @@ input{
     padding-top: 1rem;
     margin-bottom: 3rem;
   }
-  .skills{
-      display: flex;
-      justify-content: space-evenly;
-      padding-bottom: 5rem;
-      padding-top: 0.3rem;
-  }
   .card{
       display: flex;
       justify-content: center;
@@ -167,3 +162,7 @@ input{
     margin-right: auto;
     margin-left: auto;
   }
+.flex-carde{
+    display: flex;
+    flex-wrap: wrap;
+}
