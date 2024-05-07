@@ -1,0 +1,169 @@
+form{
+    border: black 1px solid;
+}
+input{
+    border: 2px solid;
+}
+.lu{
+    padding: 20px;
+}
+#email{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+#exampleInputEmail1{
+    width: 45%;
+}
+
+.sexodiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+#lu2{
+    display: flex; 
+    
+}
+#lu3{
+    display: flex;
+    margin-left: 10px;
+    width: 100%;
+}
+#lu4{
+    display: flex;
+    margin-left: 10px;
+    width: 100%;
+}
+#exampleInputNumero1{
+    width: 75%;
+}
+#exampleInputComplemento1{
+    margin-left: 10px;
+    width: 98%;
+}
+#exampleInputCidade1{
+    width: 99.5%;
+}
+.containerflex{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+.flexcontainer{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#buttonsformat{
+    width: 22%;
+    height: 45px;
+}
+#spacingM{
+    padding-left:1rem; 
+    margin-bottom: 0%;
+}
+#null{
+  border:0px ;
+  width: 100px;
+  
+}
+#border{
+  border: 0px;
+}
+.border{
+  border: 0px;
+  width: 57%;
+}
+/* codigo do indexprincipal.php */
+.titulo{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  .skills{
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 5rem;
+      padding-top: 0.3rem;
+  }
+  .card{
+      display: flex;
+      justify-content: center;
+      width:  30%;
+      height: 400px;
+      position: relative;
+      background-color: #424242;
+      border-radius: 20px;
+      box-shadow: 0px 15px 80px rgba(0, 0, 0, 0.15);
+      transition: 0.5s;
+  }
+  .card:hover{
+      height: 530px;
+  }
+  .card:hover .img-card{
+      top: -10%;
+      scale: 0.75;
+  }
+  .img-card{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 10%;
+      text-align: center;
+      transition: 0.5s;
+      padding-bottom: 0.2rem;
+  }
+  .card > .img-card > img{
+      object-fit: cover;
+      color: #fffefe;
+      width: 100%;
+      height: 100%;
+      max-width: 55%;
+      height: 43%;
+  }
+  .contentar{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      padding: 0px 30px;
+      text-align: center;
+      height: 30px;
+      transition: 0.5s;
+  }
+  .contentar h2{
+      color: #fffefe;
+      padding-bottom: 0.3rem;
+  }
+  .contentar p{
+    overflow: hidden;
+    color: #fffefe;
+  }
+  .card:hover .contentar{
+    top:  50%;
+    height: 30%;
+  }
+  .site-section{
+    padding: 5em 0;
+  }
+  .container{
+        width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
