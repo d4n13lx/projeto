@@ -1,0 +1,13 @@
+{
+    "name": "dev/sprint",
+    "autoload": {
+        "psr-4": {
+            "MVC\\":"MVC/"
+        }
+    },
+    "require": {
+        "william-costa/dot-env": "^0.1.0",
+        "william-costa/database-manager": "^0.1.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
