@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/css/pagina.css">
+</head>
+<body class="BODY">
+    <div class="form-container">
+        <form action="cadastro.php" method="post">
+            <h1>Cadastre-se</h1>
+            <input type="text" name="nome" placeholder="Escreva seu nome">
+            <input type="email" name="email" placeholder="Escreva seu E-mail">
+            <input type="password" name="senha" placeholder="Escreva sua senha">
+            <input type="password" name="csenha" placeholder="Confirme sua senha">
+            <input type="submit" name="submit" class="form-btn" value="cadastro">
+            <p>Você já possui uma conta ? <a href="login.php">Faça Login</a></p>
+        </form>
+    </div>
+    
+</body>
+</html>

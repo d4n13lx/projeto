@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/css/pagina.css">
+</head>
+
+<body class="BODY">
+    <div class="form-container">
+        <form method="Post">
+            {{status}}
+            <h1>Login</h1>
+            <input type="email" name="email" placeholder="Escreva seu E-mail" required autofocus>
+            <input type="password" name="senha" placeholder="********" required autofocus>
+            <input type="submit" class="form-btn">
+            <p>Você ainda não possui uma conta ? <a href="{{URL}}/cadastro">Cadastre-se</a></p>
+        </form>
+    </div>
+
+</body>
+
+</html>
