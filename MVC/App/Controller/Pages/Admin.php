@@ -4,13 +4,11 @@ namespace MVC\App\Controller\Pages;
 
 use \MVC\Utils\view;  /* Usando a classe view*/
 
-class Cadastro
+class Admin
 {
 
-    public static function GetCadastro()
+    public static function GetAdmin()
     {
-        return view::render('cadastro');
+        return view::render('Admin');
     }
 }
-
-?>

@@ -156,7 +156,7 @@ class Router
      * Metodo Responsavel por retornar os dados(os parametros) da rota atual 
      * @return array
      */
-    private function getRoute()
+    Private function getRoute()
     {
         //URI
         $uri = $this->getUri();
@@ -167,9 +167,9 @@ class Router
         //Validação das rotas
         foreach ($this->router as $patternRouter => $methods) {
             //Verifica se a URI bate(se emcaixa) com o peadrão
-            if (preg_match($patternRouter, $uri,$matches)) {
+            if (preg_match($patternRouter, $uri, $matches)) {
                 //Verifica se o metodo existe
-                if(isset($methods[$httpMethod])) {
+                if (isset($methods[$httpMethod])) {
 
                     //Removo a primeira posição 
                     unset($matches[0]);
@@ -177,7 +177,7 @@ class Router
                     $key = $methods[$httpMethod]['variables'];
                     $methods[$httpMethod]['variables'] = array_combine($key, $matches);
                     $methods[$httpMethod]['variables']['request'] = $this->request;
-                  
+
                     //Retorno dos parametros da rota
                     return $methods[$httpMethod];
                 }
@@ -215,10 +215,9 @@ class Router
                 $name = $parameter->getName();
                 $args[] = $route['variables'][$name] ?? null;
             }
-            
-            //Retorna a execução de fila de Middlewares
-            return (new MiddlewareQueue($route['middlewares'],$route['controller'],$args))->next($this->request);
 
+            //Retorna a execução de fila de Middlewares
+ return (new MiddlewareQueue($route['middlewares'], $route['controller'], $args))->next($this->request);
         } catch (Exception $e) {
             // Vai retornar o codigo http, ex: 200 ou 404. E vai retornar a Menssagem 
             return new Response($e->getCode(), $e->getMessage());
@@ -229,8 +228,19 @@ class Router
      * Metodo responsável por retornar a URL atual
      * @return string
      */
-    Public function getCurrentUrl()
+    public function getCurrentUrl()
     {
-        return $this->url.$this->getUri();
+        return $this->url . $this->getUri();
+    }
+
+    /**
+     * Metodo responsavel por redirecionar a URL
+     * @param string
+     */
+    public function redirect($route)
+    {
+        //URL(A url base mais a rota)
+        $url = $this->url . $route;
+        Header('Location: '.$url); exit;
     }
 }

@@ -57,16 +57,6 @@ body {
     padding: 0 0.75vw;
 
 }
-.menu-btn{
-    position: absolute;
-    margin: 25px;
-    cursor: pointer;
-
-}
-.menu-btn a svg:hover 
-{
-   fill: #89c538;
-}
 
 .menu_items {
     display: flex;
@@ -742,7 +732,6 @@ input {
 }
 
 .form-container form p {
-    padding:  0.5rem 0rem;
     color: #222;
     font-size: 18px;
 }
@@ -874,3 +863,4 @@ Box.html
     font-size: 15px;
     font-weight: 600;
 }
+

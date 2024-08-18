@@ -1,0 +1,114 @@
+.body{
+    background-color: #333;
+}
+.menu-btn{
+    position: absolute;
+    margin: 25px;
+    cursor: pointer;
+    }
+.side-bar{
+    background-color: #333;
+    border-right:  2px solid #89c53f;
+    width: 22%;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s;
+    transition-property: left;
+    }
+    .side-bar.active{
+    left: 0;
+    }
+    .side-bar .menu{
+    width: 100%;
+    padding-top: 5rem;
+    }
+    .side-bar .menu .item{
+    position: relative;
+    cursor: pointer;
+    }
+    .side-bar .menu .item a{
+    color: white;
+    fill: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 18px 20px;
+    line-height: 30px;
+    }
+    .side-bar .menu .item a:hover{
+    background-color: #89c53f;
+    transition: 0.3s;
+    }
+    .side-bar .menu .item a .dropdown{
+    position: absolute;
+    margin: 16px;
+    right: 0;
+    transition: 0.3s;
+    }
+    .side-bar .menu .item svg{
+    margin-right: 10px;
+    }
+    .side-bar .menu .item .sub-menu{
+    display: none;
+    } 
+    .side-bar .menu .item .sub-menu a{
+    padding-left: 70px;
+    }
+    .rotate{
+    transform: rotate(90deg);
+    }
+    .close-btn{
+    position: absolute;
+    margin: 25px;
+    right: 0;
+    cursor: pointer;
+    }
+    .container{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      padding-bottom:60px;
+    }
+    .container .content{
+    text-align: center;
+    }
+    .container .content h3{
+    font-size: 30px;
+    color: #fff;
+    }
+    .container .content h3 span{
+    background-color: #89c53f;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    }
+    .container .content h1{
+    font-size: 50px;
+    color: #fff;
+    }
+    .container .content p{
+    color: gray;
+    padding-top: 10px;
+    padding-bottom: 1.5rem;
+    }
+    .container .content .btn{
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #fff;
+    background: #222;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.15);
+    margin: 0 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    font-weight: 500;
+    }
+    .container .content .btn:hover{
+     background: #89c53f;
+     color: #222;
+    }

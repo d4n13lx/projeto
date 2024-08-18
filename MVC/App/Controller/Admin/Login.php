@@ -1,11 +1,14 @@
 <?php
+
 namespace MVC\App\Controller\Admin;
 
 use MVC\Utils\view;
 use MVC\App\Model\entity\User;
 use MVC\App\Session\Admin\Login as SessionAdminLogin;
+use MVC\App\HTTP\Request;
+use WilliamCosta\DatabaseManager\Database;
 
-class Login extends Page
+class Login
 {
     /**
      * Summary of getLogin
@@ -23,7 +26,6 @@ class Login extends Page
             'status' => $status
         ]);
     }
-
     public static function setLogin($request)
     {
         // Post Vars (O que foi armazenado no Post do forms)
@@ -33,37 +35,31 @@ class Login extends Page
 
         // Busca o usuário pelo e-mail
         $Obuser = User::getUserByEmail($email);
+       
 
         if(!$Obuser instanceof User) {
             return self::getLogin($request,'E-mail invalido');
         }
-        $senha = '123456';
-        $hash = '$2y$10$4nA3pEeZuE1G1ovYkEZg6u6NEKBta1qdnIOjTbMESWlNtYLOvQCu6';
-        // Adicione logs ou prints para verificar o valor das variáveis
+        $hashSenha = password_hash('123456', PASSWORD_DEFAULT);
+
+        if (!password_verify($senha, $Obuser->senha)) {
+           return self::getLogin($request, 'Senha inválida');
+        }
         
-        echo "<pre>";
-        print_r($hash);
-        echo "</pre>";
-
-        if (password_verify('123456', $hash)) {
-            echo 'Password is valid!';
-        } else {
-            echo 'Invalid password.';
-        }
-        if (!password_verify($senha, $hash)) {
-           
-            return self::getLogin($request, 'Senha inválida');
-        }
-        else {
-            SessionAdminLogin::login($Obuser);
-            print_r($_SESSION);
-        }
-
-          
-
-
-     
-        // Criar sessão de login
+        SessionAdminLogin::login($Obuser);
 
     }
+    /**
+     * Metodo responsável por deslogar o usuário
+     * @param Request
+     */
+    public static function setLogout($request)
+    {
+        // Criar sessão de login
+        SessionAdminLogin::logout();
+
+        //Redireciona o usuário para o home do Admin
+        $request->getRouter()->redirect('/admin/login');
+    }
+
 }
