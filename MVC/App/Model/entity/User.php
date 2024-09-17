@@ -31,15 +31,69 @@ CLass User
      */
     Public $senha;
 
-    /**
-     * Metodo responsável por retornar um usuário com base no seu e-mail
-     * @param string $email
-     * @return User
+ /**
+     * Metodo responsavel por retornar depoimentos 
+     * @param string $where
+     * @param string $order
+     * @param string $limit
+     * @param string $field
+     * @return PDOStatement 
      */
-    Public static function getUserByEmail($email)
+    Public static function getUsers($where = '', $order = null, $limit = null, $field = '*' )
     {
-        //Retorna da tabela user_form os usuários com os emails cadastrados no banco
-      return (new Database('user_form'))->select('email = "'.$email.'"')->fetchObject(self::class);
+        return (new Database('user_form'))->Select(
+        $where ,
+        $order,
+        $limit ,
+        $field);
+    }
+
+    
+    /**
+     * Metodo responsavel por retornar depoimentos 
+     * @param string $where
+     * @param string $order
+     * @param string $limit
+     * @param string $field
+     * @return PDOStatement 
+     */
+    Public static function GetTestimonies($where = '', $order = null, $limit = null, $field = '*' )
+    {
+        return (new Database('depoimentos'))->Select(
+        $where ,
+        $order,
+        $limit ,
+        $field);
+    }
+
+     /**
+     * Método responsável por buscar um usuário pelo e-mail
+     * @param string $email
+     * @return User|null
+     */
+    public static function getUserByEmail($email)
+    {
+        return (new Database('user_form'))->select('email = "'.$email.'"')->fetchObject(self::class);
+    }
+
+    public static function getUserById($id)
+    {
+        return self::getUsers('id = '.$id)->fetchObject(self::class);
+    }
+
+    public function excluirUser()
+    {
+        return (new Database('user_form'))->delete('id ='.$this->id);
+    }
+
+    public function CadastrarUser()
+    {
+       $this->id = (new Database('user_form'))->insert([
+        'nome'=> $this->nome,
+        'email'=>$this->email,
+        'senha'=>$this->senha
+       ]);
+       return true;
     }
 }
 ?>

@@ -64,5 +64,27 @@ class Testimony
         $limit ,
         $field);
     }
+
+    Public static function GetTestimonnybyid($id)
+    {
+        // Aqui a função deve retornar o resultado do select, sem tentar usar fetchObject diretamente
+        $result = self::GetTestimonies('id = ' . $id);
+        return $result->fetchObject(self::class);
+    }
+
+    Public function atualizar()
+    {
+
+       return (new Database('depoimentos'))->update('id ='.$this->id,[
+          'nome' => $this->nome,
+          'mensagem'=> $this->mensagem
+       ]);
+    }
+
+    Public function excluir()
+    {
+       return (new Database('depoimentos'))->delete('id ='.$this->id);
+    }
+    
 }
 ?>

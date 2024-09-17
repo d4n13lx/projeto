@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/css/pagina.css">
 </head>
-
 <body class="BODY">
     <div class="menu-btn">
         <a href="{{URL}}/">
@@ -17,16 +15,16 @@
         </a>
         </div>
     <div class="form-container">
-        <form method="Post">
+        <form method="post">
+            <h1>Cadastre-se</h1>
             {{status}}
-            <h1>Login</h1>
-            <input type="email" name="email" placeholder="Escreva seu E-mail" required autofocus>
-            <input type="password" name="senha" placeholder="********" required autofocus>
-            <input type="submit" class="form-btn">
-            <p>Você ainda não possui uma conta ? <a href="{{URL}}/cadastro">Cadastre-se</a></p>
+            <input type="text" name="nome" placeholder="Escreva seu nome">
+            <input type="email" name="email" placeholder="Escreva seu E-mail">
+            <input type="password" name="senha" placeholder="Escreva sua senha">
+            <input type="submit" class="form-btn" value="cadastro">
+            <p>Você já possui uma conta ? <a href="{{URL}}/admin/login">Faça Login</a></p>
         </form>
     </div>
-
+    
 </body>
-
 </html>

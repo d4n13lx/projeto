@@ -44,6 +44,9 @@ Class Queue
      */
     Public Function __construct($middlewares,$controller,$controllerArgs)
     {
+        if (!is_array($middlewares)) {
+        $middlewares = [$middlewares]; // Converte para array se for uma string
+    }
         $this->middlewares = array_merge(self::$default,$middlewares);
         $this->controller = $controller;
         $this->controllerArgs = $controllerArgs;

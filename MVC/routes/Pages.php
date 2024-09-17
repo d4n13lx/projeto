@@ -12,8 +12,15 @@ $obrouter->Get('/', [
 
 //Rota do Cadastro
 $obrouter->Get('/cadastro', [
-  function(){
-    return New Response(200,Pages\Cadastro::GetCadastro());
+  function($request){
+    return New Response(200,Pages\Cadastro::GetCadastro($request));
+  }
+]);
+
+//Rota do Cadastro(Post)
+$obrouter->Post('/cadastro', [
+  function($request){
+    return New Response(200,Pages\Cadastro::SetCadastro($request));
   }
 ]);
 

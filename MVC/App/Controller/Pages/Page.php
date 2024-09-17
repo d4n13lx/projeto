@@ -4,7 +4,7 @@ namespace MVC\App\Controller\Pages;
 
 use MVC\Utils\view;
 
-class Page
+Class Page
 {
     /**
      * Metodo responsavel por renderizar o layoult da paginação

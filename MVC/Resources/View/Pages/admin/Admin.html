@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/css/Admin.css">
+    <link rel="stylesheet" href="java.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body class="body">
+    <div class="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="white" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
+    </div>
+    <div class="side-bar">
+        <div class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="white" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </div>
+        <div class="menu">
+            <div class="item">
+                <a href="{{URL}}/admin">
+                    Home
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    Gráficos
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{URL}}/admin/Testimonies">
+                    Depoimentos
+                </a>
+            </div>
+            <div class="item">
+                <a class="sub-list" href="#"> <!--dropdown-->
+                    Bairros
+                    <svg xmlns="http://www.w3.org/2000/svg" class="dropdown" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg>
+                    <div class="sub-menu">
+                        <a class="sub-item" href="">Venda Nova</a>
+                        <a class="sub-item" href="">Norte</a>
+                        <a class="sub-item" href="">Nordeste</a>
+                        <a class="sub-item" href="">Pampulha</a>
+                        <a class="sub-item" href="">Noroeste</a>
+                        <a class="sub-item" href="">Oeste</a>
+                        <a class="sub-item" href="">Leste</a>
+                        <a class="sub-item" href="">Centro-Sul</a>
+                        <a class="sub-item" href="">Barreiro</a>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a class="sub-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="dropdown" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg>
+                    Regiões de Risco
+                    <div class="sub-menu">
+                        <a class="sub-item" href="">Venda Nova</a>
+                        <a class="sub-item" href="">Norte</a>
+                        <a class="sub-item" href="">Nordeste</a>
+                        <a class="sub-item" href="">Pampulha</a>
+                        <a class="sub-item" href="">Noroeste</a>
+                        <a class="sub-item" href="">Oeste</a>
+                        <a class="sub-item" href="">Leste</a>
+                        <a class="sub-item" href="">Centro-Sul</a>
+                        <a class="sub-item" href="">Barreiro</a>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{URL}}/admin/Users">
+                    Usuários
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{URL}}/admin/devs">
+                    Desenvolvedores
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h3>Olá <span>Administrador</span></h3>
+            <h1>Seja Bem Vindo</h1>
+            <p>Essa Pagina serve para você administrar<br> o nosso site</p>
+            <a href="{{URL}}/admin/logout" class="btn2">Sair</a>
+        </div>
+    </div>
+
+    <script src="/../sprint/MVC/Resources/View/Pages/admin/java/java.js" type="text/javascript">
+    </script>
+</body>
+
+</html>
