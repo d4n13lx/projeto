@@ -3,6 +3,8 @@
 namespace MVC\App\Controller\Pages;
 
 use MVC\Utils\view;
+use MVC\App\HTTP\Request;
+use WilliamCosta\DatabaseManager\Pagination;
 
 Class Page
 {

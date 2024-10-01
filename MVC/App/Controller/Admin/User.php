@@ -5,7 +5,6 @@ use MVC\Utils\view;
 use MVC\App\Model\entity\User as EntityUser;
 use WilliamCosta\DatabaseManager\Pagination;
 
-
 Class User
 {
     private static function GetUseritens($request, &$obPagination)
@@ -45,7 +44,8 @@ Class User
     {
          return view::render('admin/Users',[
             'itens' => self::GetUseritens($request, $obPagination),
-            'pagination' => self::getPagination($request,$obPagination)
+            'pagination' => self::getPagination($request,$obPagination),
+            'status' => self::getStatus($request)
           ]);
     }
 
@@ -88,12 +88,33 @@ Class User
         ]);
     }
 
+    Private static function getStatus($request)
+    {
+      $queryparams = $request->getQueryParams();
+  
+      if(!isset($queryparams['status'])) return '';
+  
+      switch($queryparams['status'])
+      {
+        case 'created':
+          return Alert::getSucess('Criado Com Sucesso');
+
+        case 'updated':
+          return Alert::getSucess('Atualizado com Sucesso');  
+    
+        case 'duplicate':
+          return Alert::getSucess('E-mail já cadastrado');
+          case 'deleted':
+            return Alert::getSucess('Usuário Deletado com Sucesso');  
+      }
+    }
+
     Public static function getDeleteUser($request,$id)
     {
       $obTestimony = EntityUser::GetUserbyid($id);
       return view::render('Admin/UserItem/delete', [
         'nome' => $obTestimony->nome,
-        'email'=>$obTestimony->email,
+        'email'=>$obTestimony->email
       ]);
       if(!$obTestimony instanceof EntityUser)
       {

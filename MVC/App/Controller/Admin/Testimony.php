@@ -9,7 +9,7 @@ use WilliamCosta\DatabaseManager\Pagination;
 class Testimony
 {
 
-  private static function GetTestimoniesitens($request, &$obPagination)
+  private static function GetTestimoniesitens($request, & $obPagination)
   {
     //Depoimentos
     $itens = '';
@@ -43,7 +43,8 @@ class Testimony
   {
     return view::render('Admin/Testimony', [
       'itens' => self::GetTestimoniesitens($request, $obPagination),
-      'pagination' => self::getPagination($request,$obPagination)
+      'pagination' => self::getPagination($request,$obPagination),
+        'status'=> self::getStatus($request)
     ]);
   }
 
@@ -93,7 +94,9 @@ class Testimony
         return Alert::getSucess('Atualizado com Sucesso');  
         break;
       case 'Duplicate':
-        return Alert::getSucess('E-mail já cadastrado');  
+        return Alert::getSucess('E-mail já cadastrado');
+        case 'deleted':
+          return Alert::getSucess('Depoimento Deletado com Sucesso');  
     }
   }
 
@@ -102,11 +105,12 @@ class Testimony
     $obTestimony = EntityTestimony::GetTestimonnybyid($id);
     return view::render('Admin/delete', [
       'nome' => $obTestimony->nome,
-      'mensagem'=>$obTestimony->mensagem,
+      'mensagem'=>$obTestimony->mensagem
     ]);
     if(!$obTestimony instanceof EntityTestimony)
     {
       $request->getRouter()->redirect('admin/Testimonies');
+      
     }
 
   }
@@ -121,7 +125,7 @@ class Testimony
 
     $obTestimony->excluir();
      //redirecionar a pagina de edição
-     $request->getRouter()->redirect('/admin/Testimonies/'.$obTestimony->id.'/edit?status=deleted');
+     $request->getRouter()->redirect('/admin/Testimonies?status=deleted');
   }
 
 
@@ -202,7 +206,6 @@ class Testimony
 
         //rendereiza Box de paginação
         return view::render('admin/Pagination/box', [
-            'links' => $links
-        ]);
+            'links' => $links  ]);
     }
 }

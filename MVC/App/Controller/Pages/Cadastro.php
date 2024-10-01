@@ -33,6 +33,7 @@ class Cadastro
 
     public static function GetCadastro($request)
     {
+      // Retornar a página do cadastro
         return view::render('Cadastro/Cadastro',[
          'status' =>  self::getStatus($request)
         ]);
@@ -40,8 +41,16 @@ class Cadastro
 
     public static function SetCadastro($request)
     {
-         //Variavel que armazena o post
-     $postvars = $request->getPostVars();
+    // 1- Vai pegar os campos "nome", "email" e "senha 
+    // 2- Pesquisar o campo "email" no banco de dados
+    // 3- Vai verificar se esse usuário já existe (caso exista retornar "usuário duplicado")
+    // 4- O sistema vai fazer o hash da senha
+    // 5- O sistema vai cadastrar o usuário no banco de dados
+    // 6- Retornar o "usuário cadastrado na uri"
+
+
+    //Variavel que armazena o post
+    $postvars = $request->getPostVars();
      $nome = $postvars['nome'];
      $email = $postvars['email'];
      $senha = $postvars['senha'];

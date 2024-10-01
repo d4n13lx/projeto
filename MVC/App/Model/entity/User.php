@@ -73,6 +73,7 @@ CLass User
      */
     public static function getUserByEmail($email)
     {
+        // Pesquisa no banco de dados o email do usuario
         return (new Database('user_form'))->select('email = "'.$email.'"')->fetchObject(self::class);
     }
 
@@ -88,12 +89,14 @@ CLass User
 
     public function CadastrarUser()
     {
+        // Cadastrar o usuario no banco de dados
        $this->id = (new Database('user_form'))->insert([
         'nome'=> $this->nome,
         'email'=>$this->email,
         'senha'=>$this->senha
        ]);
        return true;
+    
     }
 }
 ?>

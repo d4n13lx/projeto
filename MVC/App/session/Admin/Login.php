@@ -2,6 +2,8 @@
 
 namespace MVC\App\Session\Admin;
 
+use MVC\App\Model\entity\User;
+
 class Login
 {
     /**
@@ -15,7 +17,7 @@ class Login
     }
     /**
      * Metodo responsável por criar o login do usuário
-     * @param User
+     * @param User $OBuser
      * @return boolean
      */
     Public static function login($OBuser)
