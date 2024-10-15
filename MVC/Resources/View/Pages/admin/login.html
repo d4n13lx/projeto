@@ -1,25 +1,137 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html  >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/css/pagina.css">
+  <!-- Site made with Mobirise Website Builder v5.9.18, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.18, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/images/svgviewer-png-output-1-219x28.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Login</title>
+  <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/mobirise/css/mbr-additional.css?v=nTKzrN"><link rel="stylesheet" href="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/mobirise/css/mbr-additional.css?v=nTKzrN" type="text/css">
+
+  
+  
+  
 </head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-umTU2PW2x1" once="menu" id="menu02-2a">
+	
 
-<body class="BODY">
-    <div class="form-container">
-        <form method="Post">
-            {{status}}
-            <h1>Login</h1>
-            <input type="email" name="email" placeholder="Escreva seu E-mail" required autofocus>
-            <input type="password" name="senha" placeholder="Escreva sua senha" required autofocus>
-            <input type="submit" class="form-btn">
-            <p>Você ainda não possui uma conta ? <a href="{{URL}}/cadastro">Cadastre-se</a></p>
-        </form>
+	<nav class="navbar navbar-dropdown navbar-expand-lg">
+		<div class="container">
+			<div class="navbar-brand">
+				<span class="navbar-logo">
+					<a href="{{URL}}/">
+						<img src="{{URL}}/MVC/Resources/View/Pages/view_mobi/assets/images/svgviewer-png-output-1-219x28.png" alt="Mobirise Website Builder" style="height: 2rem;">
+					</a>
+				</span>
+				<span class="navbar-caption-wrap"><a class="navbar-caption text-white display-7" href="{{URL}}/">Guardirus</a></span>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+						<a class="nav-link link text-white text-primary display-7" href="{{URL}}/casos">Casos</a>
+					</li><li class="nav-item"><a class="nav-link link text-white text-primary display-7" href="{{URL}}/noticias">Notícias</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-7" href="{{URL}}/sobre">Sobre</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-7" href="{{URL}}/depoimentos">Depoimentos</a></li></ul>
+				
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="{{URL}}/cadastro">Cadastro</a> <a class="btn btn-primary display-4" href="{{URL}}/admin/login">Login</a></div>
+			</div>
+		</div>
+	</nav>
+</section>
+
+<section data-bs-version="5.1" class="article11 cid-umTVBnEWS4" id="article11-2k">
+    
+
+    
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-md-12 col-lg-10">
+                
+                
+                
+            </div>
+        </div>
     </div>
+</section>
 
+<section data-bs-version="5.1" class="form5 cid-ukU5dvwY5n" id="form02-1e">
+    
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Login</strong></h3>
+                    {{status}}
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="gyM19hk/s6hdpxzLf/PIy9DSSynVwUMX9BlakS2OZ8NfSsFcX51k1vqRu5quAbNkY89/6CkSbpeXWk/DRGBAlNU77I5pS8XW8n+qBhcPT4fw2gLLLYLhQa9wJ0sqkd0i">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            Oops...! some problem!
+                        </div>
+                    </div>
+                    <div class="dragArea column">
+                        <div class="col-md-4 offset-md-4 col-sm-8 form-group mb-3" data-for="email">
+                            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form02-1e">
+                        </div>
+                        <div class="col-md-4 offset-md-4 col-sm-8 form-group mb-3" data-for="senha">
+                            <input type="password" name="senha" placeholder="Senha" data-form-field="senha" class="form-control" value="" id="senha-form02-1e">
+                        </div>
+                        
+                        
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><input type="submit" class="btn btn-primary display-7">Send message</input></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center">
+                            <p>Você ainda não possui uma conta ? <a href="{{URL}}/cadastro">Cadastre-se</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="footer4 cid-uiTUeVE8r3" once="footers" id="footer04-6">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">© 2024 Guardirus. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  
 </body>
-
 </html>
