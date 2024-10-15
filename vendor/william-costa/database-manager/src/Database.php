@@ -4,6 +4,7 @@ namespace WilliamCosta\DatabaseManager;
 
 use \PDO;
 use \PDOException;
+use PDOStatement;
 
 class Database {
 
@@ -128,7 +129,6 @@ class Database {
      * @param  string $order
      * @param  string $limit
      * @param  string $fields
-     * @return PDOStatement
      */
     public function select($where = null, $order = null, $limit = null, $fields = '*') {
         //DADOS DA QUERY
