@@ -2,6 +2,8 @@
 
 namespace MVC\App\Session\Admin;
 
+use MVC\App\Model\entity\User;
+
 class Login
 {
     /**
@@ -15,10 +17,10 @@ class Login
     }
     /**
      * Metodo responsável por criar o login do usuário
-     * @param User
+     * @param User $OBuser
      * @return boolean
      */
-    public static function login($OBuser)
+    Public static function login($OBuser)
     {
         
         self::init();
@@ -33,5 +35,34 @@ class Login
       // Sucesso
         return true;
         
+    }
+    /**
+     * Metodo responsável por verificar se o usuário ta logado
+     * @return boolean 
+     */
+    Public static Function isLogged()
+    {
+        //Inicia a sessão
+          self::init();
+
+          //Retorna a verificação
+          return isset($_SESSION['admin']['usuario']['id']);
+
+    }
+
+    /**
+     * Metodo responsavel por executar o logout do usuário
+     * @return boolean
+     */
+    Public static function logout()
+    {
+        //Inicia a sessão
+        self::init();
+
+        //Desloga o usuário
+        unset($_SESSION['admin']['usuario']);
+         
+        //Sucesso
+        return true;
     }
 }
