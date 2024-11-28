@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Depoimentos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="utf-8"></script>
+</head>
+</head>
+
+<body class="bg-dark text-white">
+     <!-- Botão para abrir o menu lateral -->
+    <div class="d-flex justify-content-between align-items-center p-2">
+        <button class="btn btn-dark menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="white" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+        <a href="{{URL}}/admin/Testimonies" class="btn btn-outline-primary">Voltar</a>
+    </div>
+       <!-- Barra lateral -->
+       <div class="side-bar bg-dark vh-100 position-fixed start-0 top-0 p-3 w-25" style="display: none;;">
+        <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-dark close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="white" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu list-group">
+            <a href="{{URL}}/admin" class="list-group-item list-group-item-action bg-dark text-light">
+                Home
+            </a>
+            <a href="{{URL}}/admin/Testimonies" class="list-group-item list-group-item-action bg-dark text-light">
+                Depoimentos
+            </a>
+            <a href="{{URL}}/admin/Users" class="list-group-item list-group-item-action bg-dark text-light">
+                Usuários
+            </a>
+        </div>
+    </div>
+     <!-- Conteúdo principal -->
+     <div class="container text-center mt-5 pt-5">
+        <h1>Exclusão de um <span class="text-primary">depoimento</span></h3>
+        <p class="text-muted mb-4">Tem certeza que deseja excluir o depoimento de 
+            <span class="text-primary"> {{nome}}</span> que <br> 
+            comentou o texto: <span class="text-primary"> '{{mensagem}}'</span>?</p>
+            <form method="Post">
+                <button type="submite" class="btn btn-outline-danger">Excluir</button>
+            </form>
+    </div> 
+
+    <script>
+        $(document).ready(function () {
+            // Abrir e fechar sidebar
+            $('.menu-btn').click(function () {
+                $('.side-bar').show();
+            });
+            $('.close-btn').click(function () {
+                $('.side-bar').hide();
+            });
+        });
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

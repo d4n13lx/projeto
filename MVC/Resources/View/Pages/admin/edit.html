@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Depoimentos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="utf-8"></script>
+</head>
+</head>
+
+<body class="bg-dark text-light">
+    <!-- Botão para abrir o menu lateral -->
+    <div class="d-flex justify-content-between align-items-center p-2">
+        <button class="btn btn-dark menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="white" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+        <a href="{{URL}}/admin/Testimonies" class="btn btn-outline-primary">Voltar</a>
+    </div>
+    <!-- Barra lateral -->
+    <div class="side-bar bg-dark vh-100 position-fixed start-0 top-0 p-3 w-25" style="display: none;;">
+        <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-dark close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="white" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu list-group">
+            <a href="{{URL}}/admin" class="list-group-item list-group-item-action bg-dark text-light">
+                Home
+            </a>
+            <a href="{{URL}}/admin/Testimonies" class="list-group-item list-group-item-action bg-dark text-light">
+                Depoimentos
+            </a>
+            <a href="{{URL}}/admin/Users" class="list-group-item list-group-item-action bg-dark text-light">
+                Usuários
+            </a>
+        </div>
+    </div>
+     <!-- Conteúdo principal -->
+     <div class="container text-center mt-5 pt-5">
+        <h1>Atualização de um <span class="text-primary">Depoimento</span></h1>
+        <p class="text-muted">Essa Pagina serve para o administrador poder <br> atualizar Depoimentos</p>
+    </div>
+
+    <section data-bs-version="5.1" class="form5 cid-ukUbxmF6QR mt-5" id="form02-20">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input
+                            type="hidden" name="email" data-form-email="true"
+                            value="tucPjO8Q/iPvvic+//QW5ibu5ZroxsI5raVCEaCwXiwfdCNKAqbdaJpUpX0YDvmw3gkcrnT+BgyyJ8AcLYThQr/p2wq8l0lmYwByi1F8r105SGl6yLPsE4mOqVi1yegq">
+                            {{status}}
+                            <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
+                                filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                Oops...! some problem!
+                            </div>
+                        </div>
+                        <div class="dragArea row mt-3">
+                            <div class="col-12 form-group mb-3" data-for="input">
+                                <input name="id" type="text" placeholder="id" data-form-field="input"
+                                    class="form-control" id="textarea-form02-20 " value="{{id}}" disabled>
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="input">
+                                <input name="nome" type="text" placeholder="nome" data-form-field="input"
+                                    class="form-control" id="textarea-form02-20 " value="{{nome}}">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="textarea">
+                                <textarea name="mensagem" placeholder="mensagem" data-form-field="textarea"
+                                    class="form-control" id="textarea-form02-20">{{mensagem}}</textarea>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button
+                                    type="submit" class="btn btn-primary display-7">Atualizar</button>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            // Abrir e fechar sidebar
+            $('.menu-btn').click(function () {
+                $('.side-bar').show();
+            });
+            $('.close-btn').click(function () {
+                $('.side-bar').hide();
+            });
+        });
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
