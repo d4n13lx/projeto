@@ -1,26 +1,14 @@
 <?php
-use MVC\App\Controller\Admin;
-use MVC\App\HTTP\Response;
 
-//Rota do Admin
-$obrouter->Get('/admin', [
-  function(){
-    return New Response(200,'Admin :)');
-  }
-]);
+//Inclui a rota de Home
+@include  __DIR__.'/../routes/admin/Home.php';
 
-//Rota do Login do Admin
-$obrouter->Get('/admin/login', [
-    function($request){
-      return New Response(200,Admin\Login::getLogin($request));
-    }
-  ]);
+//Inclui a rota de Login
+@include  __DIR__.'/../routes/admin/login.php';
 
-  //Rota do Login do Admin(POST)
-$obrouter->Post('/admin/login', [
-    function($request){
-     
-      return New Response(200,Admin\Login::setLogin($request));
-    }
-  ]);
+//Inclui a rota dos depoimentos de Admin
+@include __DIR__.'/../routes/admin/Testimonies.php';
+
+//Inclui a rota dos Usuarios
+@include __DIR__.'/../routes/admin/User.php';
 ?>
