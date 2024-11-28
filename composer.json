@@ -8,6 +8,9 @@
     "require": {
         "william-costa/dot-env": "^0.1.0",
         "william-costa/database-manager": "^0.1.0",
-        "phpmailer/phpmailer": "^6.9"
+        "phpmailer/phpmailer": "^6.9",
+        "symfony/dom-crawler": "^7.1",
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/css-selector": "^7.1"
     }
 }
