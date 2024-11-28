@@ -2,9 +2,9 @@
 
 namespace MVC\App\Controller\Pages;
 
-use \MVC\Utils\view;  /* Usando a classe view*/
-//Usando a classe testimony da pasta entity
+use MVC\Utils\view;  
 use MVC\App\Model\entity\Testimony as EntityTestimony; 
+use MVC\App\HTTP\Request;
 use WilliamCosta\DatabaseManager\Pagination;
 
 date_default_timezone_set('America/Sao_Paulo');
@@ -73,11 +73,14 @@ class Testimony extends Page
         $obTestimony = new EntityTestimony();
         $obTestimony->nome = $postVars['nome'];
         $obTestimony->mensagem = $postVars['mensagem'];
+        $obTestimony->user_id = $postVars['id'];
         $obTestimony->Cadastrar();
 
         // Redirecionar para a página de depoimentos
         header('Location: http://localhost/sprint/depoimentos');
         exit;
     }
+
+    
 }
 ?>

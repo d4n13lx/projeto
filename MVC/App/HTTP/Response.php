@@ -91,6 +91,10 @@ Class Response{
              echo $this->conteudo;
             exit;
             
+            case 'application/json':
+             echo json_encode($this->conteudo, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            exit;
+            
         }
     }
 

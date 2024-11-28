@@ -10,7 +10,7 @@ Class Request {
     Private $router;
    /**
     * Método HTTP da Requisição
-    @Var String 
+    * @var String 
     */
     Private $httpMethod;
 
