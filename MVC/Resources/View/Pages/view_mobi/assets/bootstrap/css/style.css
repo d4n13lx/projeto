@@ -1,0 +1,270 @@
+
+        /*-------------------------*/
+        /*Região Norte: Ok*/
+        #AreaNorte {
+            fill-opacity: 50%;
+            transition: .3s;
+            stroke: black;
+            stroke-width: 2;
+        }
+        #AreaNorte mask{
+            fill-opacity: 100%;
+            transition: .3s;
+        }
+        #AreaNorte:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalNorte:hover  {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+        
+        #RegionalNorte:hover #AreaNorte{
+            fill-opacity: 100%;
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+        /*-------------------------*/
+        /*Região barreiro: Ok*/
+        #AreaBarreiro {
+            fill-opacity: 50%;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        #AreaBarreiro:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalBarreiro:hover path {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+        #RegionalBarreiro:hover #AreaBarreiro{
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+
+        /*-------------------------*/
+        /*Região VendaNova: Ok*/
+        #AreaVendaNova {
+            fill-opacity: 50%;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        #AreaVendaNova:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalVenda-Nova:hover path {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+        #RegionalVenda-Nova:hover #AreaVendaNova{
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+
+        /*-------------------------*/
+        /*Região Leste: Ok*/
+        #AreaLeste {
+            fill-opacity: 50%;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        #AreaLeste:hover {
+            fill-opacity: 100%;
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        }
+
+        #RegionalLeste:hover path {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            
+        }
+        #RegionalLeste:hover #AreaLeste{
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+        
+
+        /*-------------------------*/
+        /*Região Pampulha: Ok*/
+        #AreaPampulha {
+            fill-opacity: 50%;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        #AreaPampulha:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalPampulha:hover path {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+        #RegionalPampulha:hover #AreaPampulha{
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+        /*-------------------------*/
+        /*Região Noroeste: Ok*/
+        #AreaNoroeste {
+            fill-opacity: 50%;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        #AreaNoroeste:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalNoroeste:hover path {
+            fill-opacity: 100%;
+
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+
+        #RegionalNoroeste:hover #AreaNoroeste{
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+
+        /*-------------------------*/
+        /*Região Nordeste: Ok*/
+        #AreaNordeste {
+            fill-opacity: 50%;
+            transition: .3s;
+            stroke: black;
+            stroke-width: 2;
+        }
+        #AreaNordeste mask{
+            fill-opacity: 100%;
+            transition: .3s;
+        }
+        #AreaNordeste:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalNordeste:hover  {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+        
+        #RegionalNordeste:hover #AreaNordeste{
+            fill-opacity: 100%;
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+        
+        /*-------------------------*/
+        /*Região Oeste: Ok*/
+        #AreaOeste {
+            fill-opacity: 50%;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        #AreaOeste:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalOeste:hover path {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+        #RegionalOeste:hover #AreaOeste{
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+
+        /*-------------------------*/
+        /*Região CentroSul: Ok*/
+        #AreaCentroSul {
+            fill-opacity: 50%;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        #AreaCentroSul:hover {
+            fill-opacity: 100%;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0)); 
+        
+        }
+
+        #RegionalCentro-Sul:hover path {
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+        }
+        #RegionalCentro-Sul:hover #AreaCentroSul{
+            fill-opacity: 100%;
+            transform: translate(0px,-10px);
+            transition: .3s;
+            filter: drop-shadow(0px 10px 0px rgb(0, 0, 0));
+        }
+
+        /*-------------------------*/
+        .responsive-svg {
+            max-width: 476px;
+            /* Limite a largura máxima do SVG */
+            height: auto;
+            /* Mantém a proporção do SVG */
+        }
+
+        @media (max-width: 500px) {
+            .responsive-svg {
+                width: 100%;
+                /* Ajusta a largura para 100% em telas menores */
+                height: auto;
+                /* Mantém a proporção do SVG */
+            }
+        }
+        .overlay-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);  /* Fundo com transparência */
+            z-index: 10;  /* Eleva o overlay acima dos outros elementos */
+        }
