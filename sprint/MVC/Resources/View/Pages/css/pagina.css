@@ -1,0 +1,883 @@
+* {
+
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #ffff;
+}
+
+.abrigar {
+    padding: 2vh 0;
+    background-color: #333;
+}
+.abrigar2{
+    padding: 2vh 0;
+    background-color: #fff;   
+}
+
+.container {
+    width: 100%;
+    padding: 0 1vw;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.containerflex {
+    display: flex;
+    width: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 -1vw;
+
+}
+
+.guardvirus {
+    padding: 0 0.75vw;
+
+}
+
+.guardvirus img {
+    max-width: 3vw;
+    min-width: 80px;
+    height: auto;
+}
+
+.menu {
+    padding: 0 0.75vw;
+
+}
+.menu-btn{
+    position: absolute;
+    margin: 25px;
+    cursor: pointer;
+
+}
+.menu-btn a svg:hover 
+{
+   fill: #89c538;
+}
+
+.menu_items {
+    display: flex;
+}
+
+.submenu {
+    position: relative;
+    /* Para posicionar subitens */
+    float: left;
+}
+
+.submenu:hover .items_submenu {
+    display: block;
+    /* Exibe subitens quando o item pai é hover */
+}
+
+.items_submenu {
+    display: none;
+    /* Oculta subitens por padrão */
+    position: absolute;
+    top: 100%;
+    /* Posiciona abaixo do item pai */
+    width: 160px;
+}
+
+.sub_item {
+    float: none;
+    /* Coloca os itens de submenu em uma coluna */
+    background-color: #222;
+}
+
+.hover {
+    display: block;
+    color: white;
+    /* Cor do texto */
+    text-align: center;
+    padding: 1.2vh 0.8vw;
+    /* Espaçamento interno */
+    transition: .3s;
+
+}
+
+.hover_sub {
+    display: block;
+    color: white;
+    /* Cor do texto */
+    text-align: center;
+    padding: 1.2vh 0.8vw;
+    /* Espaçamento interno */
+    transition: .3s;
+    border-left: 1px solid #89c53f;
+    border-right: 1px solid #89c53f;
+}
+
+.hover_sub:hover {
+    color: #89c53f;
+}
+
+.hover:hover {
+    color: #89c53f;
+}
+
+.buton_acesso_conta {
+    padding: 0 0.75vw;
+    display: grid;
+    gap: 1vw;
+}
+
+.button1 {
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: .3s;
+    width: 5vw;
+    min-width: 110px;
+    border: none;
+    grid-row: 1;
+}
+
+.button1:hover {
+    background-color: #89c53f;
+    color: white;
+}
+
+.button2 {
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: .3s;
+    width: 5vw;
+    min-width: 110px;
+    border: none;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #89c53f;
+    color: white;
+}
+
+.grid-column-1 {
+    display: grid;
+    grid-template-columns: 29vw 22vw;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 3vh 27vh 27vh;
+    margin: 0 auto;
+    max-width: 1100px;
+
+
+}
+
+.item-1 {
+    margin: 0.22vw;
+    background-color: #333;
+    grid-column: 1;
+    grid-row: 2 /4;
+    display: grid;
+    min-height: 498px;
+    max-height: 498px;
+    align-items: end;
+
+}
+
+.item-2 {
+
+    display: grid;
+    grid-row: 2 /4;
+    min-height: 507px;
+    max-height: 507px;
+
+}
+
+.item_grid-1 {
+    display: grid;
+    margin: 0.22vw;
+    background-color: #333;
+    grid-row: 1;
+    min-height: 243px;
+    max-height: 243px;
+    align-items: end;
+}
+
+.item_grid-2 {
+    display: grid;
+    margin: 0.22vw;
+    background-color: #333;
+    grid-row: 2;
+    min-height: 243px;
+    max-height: 243px;
+    align-items: end;
+}
+
+h1 {
+    text-align: start;
+    font-size: 1.25em;
+    font-weight: normal;
+    padding: 0 0.75vw;
+}
+
+/**/
+
+/**/
+.informaçoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    background-color: white;
+
+    height: 0;
+    transition: 1.2s;
+    transition-duration: 2s;
+    opacity: 0;
+    transition-property: height;
+
+}
+
+.item-1:hover .informaçoes {
+    display: block;
+    opacity: 0.70;
+    height: 249px;
+}
+
+.informaçoes h1 {
+
+    opacity: 0;
+    transition: 1s;
+    transition-duration: 1s;
+    transition-delay: 1.75s;
+}
+
+.item-1:hover .informaçoes h1 {
+    opacity: 1;
+
+}
+
+.informaçoes p {
+    padding: 1vh 0.75vw;
+    opacity: 0;
+    transition: 1s;
+    transition-duration: 1s;
+    transition-delay: 2s;
+}
+
+.item-1:hover .informaçoes p {
+    opacity: 1;
+}
+
+.informaçoes2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    background-color: white;
+    height: 0;
+    opacity: 0;
+    transition: 1.2s;
+    transition-duration: 2s;
+    transition-property: height;
+
+}
+
+.item-2 .item_grid-1:hover .informaçoes2 {
+    display: block;
+    opacity: 0.70;
+    height: 194px;
+    transition: 2s;
+}
+
+.item-2 .item_grid-1:hover .informaçoes2 h1 {
+    display: block;
+    opacity: 1;
+    transition: 4s;
+    transition-delay: 1s;
+
+
+}
+
+.item-2 .item_grid-1:hover .informaçoes2 p {
+    display: block;
+    opacity: 1;
+    transition-delay: 2s;
+
+
+}
+
+/**/
+
+.item-2 .item_grid-2:hover .informaçoes2 {
+    display: block;
+    opacity: 0.70;
+    height: 194px;
+}
+
+
+.item-2 .item_grid-2:hover .informaçoes2 h1 {
+    display: block;
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.item-2 .item_grid-2:hover .informaçoes2 p {
+
+    display: block;
+    opacity: 1;
+    transition-delay: 2s;
+}
+
+
+.item_grid-1 .informaçoes2 h1 {
+    height: auto;
+    width: 428px;
+    position: absolute;
+    top: auto;
+    opacity: 0;
+    transition: 1s;
+    transition-duration: 1s;
+    transition-delay: 1.75s;
+
+}
+
+.item_grid-1 .informaçoes2 p {
+    height: 170px;
+    width: 428px;
+    position: absolute;
+    top: 207px;
+    padding: 1vh 0.75vw;
+    opacity: 0;
+    transition: 1s;
+    transition-duration: 1s;
+    transition-delay: 2s;
+
+}
+
+.item_grid-2 .informaçoes2 h1 {
+
+
+    opacity: 0;
+    transition: 1s;
+    transition-duration: 1s;
+    transition-delay: 1.75s;
+}
+
+.item_grid-2 .informaçoes2 p {
+
+    padding: 1vh 0.75vw;
+    opacity: 0;
+    transition: 1s;
+    transition-duration: 1s;
+    transition-delay: 2s;
+}
+
+
+.blocos {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titulo_blocos {
+    padding: 4vh 0;
+    grid-column: 2;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.blocos_items {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 22px;
+    background-color: white;
+    width: 240px;
+    min-height: 240px;
+    color: #000;
+    line-height: 32px;
+    padding: 30px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: none;
+    grid-row: 2;
+
+}
+
+.blocos_items:hover {
+    background-color: rgba(60, 60, 60, 0.75);
+    transition: 0.7s;
+    transition-duration: 0.9s;
+
+}
+
+.blocos_items:hover span {
+    display: none;
+}
+
+.bloco_sub {
+    display: none;
+    opacity: 1;
+    color: white;
+
+}
+
+.blocos_items:hover .bloco_sub {
+    display: block;
+    transition-delay: 0.5s;
+}
+
+.categorias_flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
+    align-items: center;
+    gap: 0 110px;
+}
+
+.teste {
+    width: 100px;
+    height: 100px;
+    background: red;
+
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.teste:hover {
+    font-size: 26px;
+    width: 200px;
+    height: 200px;
+}
+
+.container_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 2vw;
+}
+
+.item_img {
+    grid-row: 1;
+    margin: auto;
+    min-width: 750px;
+    min-height: 440px;
+    max-width: 750px;
+    max-height: 440px;
+}
+
+.item_text {
+    grid-row: 1;
+}
+
+.item_text h1 {
+    margin-bottom: 1vh;
+}
+
+.item_text p {
+    padding: 1vw;
+}
+
+/*
+Parte do codigo que eu peguei do style.css
+Lucca vc fez essa parte ent vc sabe como organizar ?
+*/
+
+form {
+    border: black 1px solid;
+}
+
+input {
+    border: 2px solid;
+}
+
+.lu {
+    padding: 20px;
+}
+
+#email {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#exampleInputEmail1 {
+    width: 45%;
+}
+
+.sexodiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#lu2 {
+    display: flex;
+
+}
+
+#lu3 {
+    display: flex;
+    margin-left: 10px;
+    width: 100%;
+}
+
+#lu4 {
+    display: flex;
+    margin-left: 10px;
+    width: 100%;
+}
+
+#exampleInputNumero1 {
+    width: 75%;
+}
+
+#exampleInputComplemento1 {
+    margin-left: 10px;
+    width: 98%;
+}
+
+#exampleInputCidade1 {
+    width: 99.5%;
+}
+
+.containerflex {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.flexcontainer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#buttonsformat {
+    width: 22%;
+    height: 45px;
+}
+
+#spacingM {
+    padding-left: 1rem;
+    margin-bottom: 0%;
+}
+
+#null {
+    border: 0px;
+    width: 100px;
+
+}
+
+#border {
+    border: 0px;
+}
+
+.border {
+    border: 0px;
+    width: 57%;
+}
+
+/* codigo do indexprincipal.php */
+.titulo {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 400px;
+    position: relative;
+    background-color: #424242;
+    border-radius: 20px;
+    box-shadow: 0px 15px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 530px;
+}
+
+.card:hover .img-card {
+    top: -10%;
+    scale: 0.75;
+}
+
+.img-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    text-align: center;
+    transition: 0.5s;
+    padding-bottom: 0.2rem;
+}
+
+.contentar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    transition: 0.5s;
+}
+
+.contentar h2 {
+    color: #fffefe;
+    padding-bottom: 0.3rem;
+}
+
+.contentar p {
+    overflow: hidden;
+    color: #fffefe;
+}
+
+.card:hover .contentar {
+    top: 50%;
+    height: 30%;
+}
+
+.site-section {
+    padding: 5em 0;
+}
+
+.flex-carde {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*   
+ -------------------------------------------------------------------------------------------
+ Cadastro.php css
+*/
+.BODY {
+    background-color: #ddd;
+}
+
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.form-container form {
+    width: 35%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .1);
+    background: #fff;
+    text-align: center;
+    border: transparent;
+}
+
+.form-container h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #222;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.form-container .margem {
+    padding-bottom: 0.9rem;
+}
+
+.form-container input {
+    border-radius: 4px;
+    width: 80%;
+    padding: 8px 10px;
+    font-size: 17px;
+    margin: 8px 0;
+    background: #eee;
+    border: #999;
+}
+
+.form-container form .form-btn {
+    width: 35%;
+    font-size: 20px;
+    color: #fff;
+    background: #333;
+    margin: 5px 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: 500;
+    border-color: transparent;
+}
+
+.form-container form .form-btn:hover {
+    color: #222;
+    background-color: #89c538;
+}
+
+.form-container form p {
+    padding:  0.5rem 0rem;
+    color: #222;
+    font-size: 18px;
+}
+
+.form-container form p a {
+    color: #89c538;
+}
+
+.form-container form span {
+    margin: 10px 0;
+    color: red;
+    display: block;
+    font-size: 20px;
+}
+/*
+CSS de Depoimentos
+*/
+.centralizar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card-depoimentos{
+    margin-bottom: 1.5em;
+    border: 1px solid #424242;
+    width: 100%;
+    max-width: 45vw;
+}
+.card-header{
+    background-color: #e2e2e2;
+    color: #222;
+    font-size: 18px;
+    border-bottom: 1px solid #222;
+    padding: 1vh;
+}
+.card-body{
+    background-color: #f0efef;
+    color: #222;
+    font-size: 14px;
+    padding: 1vh;
+}
+#form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 10vh;
+}
+#form > h3{
+ text-align: center;
+ padding: 2vh;
+}
+#form > form{
+    max-width: 50vw;
+    width: 100%;
+    border: transparent;
+}
+.depoimento-form{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+}
+#nome{
+    padding-bottom: 1vh;
+}
+#menssagem{
+    border-radius: 5px;
+    border: 1px solid #424242;
+    height: 5vh;
+}
+#textarea{
+    border-radius: 5px;
+    height: 20vh;
+}
+.Comentar-btn{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+#Comentar{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: transparent;
+    transition: 0.3s;
+}
+#Comentar:hover{
+    background-color: #89c538;
+    color: #fff;
+}
+/*
+Box.html
+*/
+.pagination {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-direction: row;
+}
+
+.page-item {
+    margin: 0 5px;
+    background-color: #999;
+}
+.page-item.active {
+    background-color: #89c538;
+}
+.page-link.active {
+    color: white;
+    background-color: #89c538;
+}
+
+.page-link {
+    text-decoration: none;
+    color: #89c53f;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+/* Parte do login.html e status.html */
+.space-alert 
+{
+    padding: 1vh;
+}
+.erro
+{
+    text-align: center;
+    color: green;
+    font-size: 15px;
+    font-weight: 600;
+}
+.success
+{
+    text-align: center;
+    color: yellow;
+    font-size: 15px;
+    font-weight: 600;
+}
